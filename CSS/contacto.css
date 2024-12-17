@@ -1,0 +1,250 @@
+@font-face {  
+    font-family: 'Sweet-Someday';  
+    src: url(/fonts/Sweet\ Someday.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+@font-face {  
+    font-family: 'Dogname';  
+    src: url(/fonts/Dogname.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+@font-face {  
+    font-family: 'Lemon';  
+    src: url(/fonts/Save\ Lemon.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+
+:root {
+    --fuente-Sweet-Someday: 'Sweet-Someday', sans-serif;
+    --fuente-Dogname: 'Dogname', sans-serif;
+    --fuente-Lemon: 'Lemon', sans-serif;
+    
+    --fondo: #ffffff;
+    --color-logo: #FF407D;
+    --color-nav: #333;
+
+    --color-de-presentación: #ff90bc;
+    --color-de-sublink: #AEE2FF;
+    --color-de-footer: #FF90BC;
+}
+
+
+body {
+    background-color: var(--fondo);
+    box-sizing: border-box;
+    line-height: 1.6;
+    margin: 0;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-logo);
+    font-family: var(--fuente-Sweet-Someday);
+    font-size: 25px;
+    margin-top: -2%;
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;    
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.navegacion__lista {
+display: flex;
+flex-direction: row;
+}
+
+.navegacion__elemento a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 17px;                        /* Tamaño de la fuente de los enlaces */
+    font-weight: 700;                         /* Grosor de la fuente de los enlaces */
+    color: var(--color-nav);            /* Color del texto del enlace utilizando la variable definida */
+    text-decoration: none;                    /* Eliminar subrayado del texto del enlace */
+    margin-right: 40px; 
+}
+
+/* ------------------------------ Sección Presentación -------------------------------*/
+
+.presentacion {
+    align-items: center;            /* Centrar todo el contenido verticalmente */
+    width: 90%;
+    height: 400px;                  /* Ajusta la altura según tus necesidades */
+    border-radius: 25px;
+    background-color: var(--color-de-presentación);
+    color: #1c191a;                 /* Color del texto */
+    padding: 0px;                   /* Espaciado interno */
+    margin-left: 5%;               /* Separo el lado izquierdo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    transition: transform 0.2s;      /* Suaviza la transformación */
+    
+    position: relative;             /* Necesario para aplicar z-index */
+    z-index: 1000;                  /* Asegura que esté delante de los demás contenidos */
+}
+
+.presentacion:hover{
+    transform: scale(1.04); /* Amplía el círculo al pasar el mouse */
+}
+
+.presentacion__contenedor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.presentacion__titulo{
+    margin-top: 10%;
+    text-align: left;
+    margin-left: 10%;
+    color: #ffffff;
+    font-family: var(--fuente-Lemon);
+    font-size: 30px;
+}
+
+.contenedor__img {
+    margin: auto;
+    width: 568px;
+    
+}
+
+.avatar {
+    width: 100%;
+    text-align: right;
+    margin-left: 60%;
+    margin-top: -62%;
+    background-attachment: fixed;
+}
+
+.redes {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding por defecto */
+    margin: 0; /* Quitar el margen por defecto */
+    display: flex; /* Disposición en línea */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin-top: -16%;
+    margin-left: 15%;
+}
+
+.redes__img a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    display: flex; /* Alinea texto e imagen horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+.redes__img img {
+    margin-left: 8px; /* Espaciado entre texto e imagen */
+}
+
+/* ------------------------------ Sección Contacto -------------------------------*/
+
+.contacto {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.contacto__titulo {
+    font-family: var(--fuente-Dogname);
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Formulario */
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto__grupo {
+    display: flex;
+    gap: 20px; /* Espacio entre los campos */
+}
+
+.contacto__campo-wrapper {
+    flex: 1; /* Hace que ambos campos sean iguales en ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Campos de entrada */
+.contacto__campo {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.contacto__campo:focus {
+    border-color: #333 ; /* Resalte al enfocar */
+    outline: none;
+}
+
+/* Textarea */
+.contacto__campo--textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+/* Botón */
+.contacto__boton {
+    align-self: flex-end; /* Alinea el botón a la derecha */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto__boton:hover {
+    background-color: var(--color-de-sublink);
+}
+
+.footer {
+    background-color: var(--color-de-footer); /* Color de fondo del pie de página */
+    padding: 20px;                           /* Espaciado del pie de página */
+    color: #ffffff;            /* Color del texto */
+    text-align: center;                       /* Centrar texto */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   /* Usar fuente Montserrat */
+    font-size: 13px;                       /* Tamaño de fuente */
+    font-weight: 400; 
+    margin-top: 5%;                       /* Grosor de fuente */
+}
+
+.footernombre {
+    font-family: var(--fuente-Sweet-Someday);
+    font-size: 19px;
+}

@@ -1,0 +1,523 @@
+@font-face {  
+    font-family: 'Sweet-Someday';  
+    src: url(fonts/Sweet-Someday.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+@font-face {  
+    font-family: 'Dogname';  
+    src: url(fonts/Dogname.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+@font-face {  
+    font-family: 'Lemon';  
+    src: url(fonts/Save-Lemon.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+
+
+:root {
+    --fuente-Sweet-Someday: 'Sweet-Someday', sans-serif;
+    --fuente-Dogname: 'Dogname', sans-serif;
+    --fuente-Lemon: 'Lemon', sans-serif;
+    
+    --fondo: #ffffff;
+    --color-logo: #FF407D;
+    --color-nav: #333;
+
+    --color-de-presentación: #FF90BC;
+    --botones: #AEE2FF;
+    --color-de-aficiones: #D9ACF5;
+    --color-de-botones: #F8E8EE;
+    --color-de-link: #333;
+    --color-de-sublink: #AEE2FF;
+    --color-de-footer: #FF90BC;
+}
+
+
+body {
+    background-color: var(--fondo);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-logo);
+    font-family: var(--fuente-Sweet-Someday);
+    font-size: 25px;
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.navegacion__lista {
+    display: none;
+}
+
+.navegacion__elemento a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 20px;                        /* Tamaño de la fuente de los enlaces */
+    font-weight: 700;                         /* Grosor de la fuente de los enlaces */
+    color: var(--color-nav);            /* Color del texto del enlace utilizando la variable definida */
+    text-decoration: none;                    /* Eliminar subrayado del texto del enlace */
+    margin-right: 40px;  
+}
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion {
+    align-items: center;            /* Centrar todo el contenido verticalmente */
+    width: 55%;
+    height: 457px;                  /* Ajusta la altura según tus necesidades */
+    border-radius: 25px;
+    background-color: var(--color-de-presentación);
+    color: #1c191a;                 /* Color del texto */
+    padding: 0px;                   /* Espaciado interno */
+    margin-left: 24%;               /* Separo el lado izquierdo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    transition: transform 0.2s;      /* Suaviza la transformación */
+    
+    position: relative;             /* Necesario para aplicar z-index */
+    z-index: 1000;                  /* Asegura que esté delante de los demás contenidos */
+}
+
+
+.presentacion:hover{
+    transform: scale(1.04); /* Amplía el círculo al pasar el mouse */
+}
+
+.presentacion__contenedor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.presentacion__titulo{
+    margin-top: 100px;
+    text-align: left;
+    margin-left: 10%;
+    color: #ffffff;
+    font-family: var(--fuente-Lemon);
+    font-size: 30px;
+}
+
+.presentacion__subtitulo{
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 10%;
+    color: #ffffff;
+    font-family: var(--fuente-Lemon);
+    font-size: 30px;
+}
+
+.contenedor__img {
+    margin: auto;
+    width: 568px;
+    
+}
+
+.avatar {
+    width: 100%;
+    text-align: right;
+    margin-left: 29%;
+    margin-top: -61.8%;
+    background-attachment: fixed;
+}
+
+.redes {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding por defecto */
+    margin: 0; /* Quitar el margen por defecto */
+    display: flex; /* Disposición en línea */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin-top: -25%;
+    margin-left: 12%;
+}
+
+.redes__img a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    display: flex; /* Alinea texto e imagen horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+.redes__img img {
+    margin-left: 8px; /* Espaciado entre texto e imagen */
+}
+
+/* ------------------------------- Descripción -------------------------------------*/
+
+.presentacion__sobremi {
+    list-style: none; /* Quita el estilo de lista */
+    display: inline-block; /* Permite usar las propiedades de ancho y altura */
+    background-color: var(--botones); /* Color de fondo (puedes cambiarlo) */
+    border-radius: 25px; /* Hace que sea redondeado */
+    width: 180px; /* Ancho del círculo */
+    height: 60px; /* Altura del círculo */
+    margin-left: 15%;
+    margin-top: 2%;
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 30px; /* Centra el texto verticalmente */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: bold; /* Hace el texto más grueso */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    transition: transform 0.3s; /* Suaviza la transformación */
+}
+
+.presentacion__sobremi:hover {
+    transform: scale(1.01); /* Amplía el círculo al pasar el mouse */
+}
+
+.presentacion__sobremi a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #333; /* Color del texto */
+    font-family: var(--fuente-Dogname);
+    font-size: 18px;
+}
+
+.presentacion__sobremi:hover {
+    transform: scale(1.1); /* Amplía el círculo al pasar el mouse */
+}
+
+.presentacion__sobremi a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #333; /* Color del texto */
+}
+
+.presentacion__descripcion {
+    align-items: center;            /* Centrar todo el contenido verticalmente */
+    width: 20%;
+    height: auto;                  /* Ajusta la altura según tus necesidades */
+    border-radius: 5%;
+    background-color: var(--fondo);
+    color: #1c191a;               /* Color del texto */
+    padding: 0px;                   /* Espaciado interno */
+    margin-left: 2%;               /* Separo el lado izq*/
+    margin-top: -30%;
+}
+
+.descripcion {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px; /* Tamaño de fuente */
+    color: #555; /* Color del texto */
+    line-height: 1.6; /* Altura de línea */
+}
+
+/*------------------------------ Sección de Aficiones ------------------------------*/
+/* Contenedor general de aficiones */
+.aficion-container {
+    position: absolute; /* Para posicionar en la esquina superior derecha */
+    margin-top: -30%; /* Ajusta la separación desde la parte superior */
+    right: 2%; /* Ajusta la separación desde la derecha */
+    background-color: var(--color-de-aficiones); /* Fondo del contenedor */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno reducido */
+    text-align: center; /* Alineación del contenido al lado derecho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    transition: transform 0.3s; /* Animación al pasar el mouse */
+    width: 250px; /* Ancho ajustado */
+    height: 53.1%;
+    
+}
+
+
+
+/* Estilo del título de aficiones */
+.aficiones h3 {
+    font-family: var(--fuente-Dogname);
+    font-size: 25px; /* Tamaño de fuente reducido */
+    margin-bottom: 30px; /* Espaciado debajo del título */
+    color: #1c191a;
+    text-align: center; /* Alinea el texto a la derecha */  
+}
+
+/* Estilo del slider */
+.slider-frame {
+    width: 100%; /* Ancho ajustado al contenedor */
+    height: 900%; /* Altura del carrusel reducida */
+    overflow: hidden ;
+    margin: 0 auto; /* Centra dentro del contenedor */
+    border-radius: 10px; /* Bordes redondeados para el carrusel */
+    left: 10%;
+    
+}
+
+.aficion-container:hover{
+    transform: scale(1.02); /* Amplía el círculo al pasar el mouse */
+}
+
+/* Lista de imágenes dentro del slider */
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: calc(18% * 5); /* Ancho total para 5 imágenes */
+    animation: slide 20s infinite alternate ease-in-out; /* Animación para mover imágenes */
+}
+
+/* Cada elemento del carrusel */
+.slider-frame li {
+    list-style: none;
+    flex: 0 0 80%; /* Cada imagen ocupa el 80% del ancho del contenedor */
+}
+
+/* Estilo de las imágenes */
+.slider-frame img {
+    width: 100%; /* Imagen ocupa el 100% del espacio disponible */
+    object-fit: contain; /* Asegura que las imágenes se adapten correctamente */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Animación del slider */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+/*------------------------------ Sección de Habilidades --------------------------------*/
+.tituloTex1 {
+    display: flex;
+    justify-content: center;  /* Centrar todo el contenido horizontalmente */
+    align-items: center;      /* Centrar todo el contenido verticalmente */
+    width: 70%;
+    height: 100px;      /* Ajusta la altura según tus necesidades */
+    background-color: var(--color-de-botones);
+    color: #1c191a;          /* Color del texto */
+    padding: 0px;           /* Espaciado interno */
+    margin-top: 5%;
+    margin-left: 15%;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    transition: transform 0.2s;      
+}
+
+.tituloTex1 h3{
+    font-family: var(--fuente-Dogname);
+    font-size: 35px;
+}
+
+.habilidades__links ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.habilidades-item {
+    position: relative;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px;
+}
+
+.habilidades-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.habilidades-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
+    transition: opacity 0.3s ease;
+}
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+.tituloTex {
+    display: flex;
+    justify-content: center;  /* Centrar todo el contenido horizontalmente */
+    align-items: center;      /* Centrar todo el contenido verticalmente */
+    width: 70%;
+    height: 100px;      /* Ajusta la altura según tus necesidades */
+    background-color: var(--color-de-botones);
+    color: #1c191a;          /* Color del texto */
+    padding: 0px;           /* Espaciado interno */
+    margin-top: 5%;
+    margin-left: 15%;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    transition: transform 0.2s;      
+}
+
+
+.tituloTex h3{
+    font-family: var(--fuente-Dogname);
+    font-size: 35px;
+}
+
+.proyectos {
+    position: absolute;
+    align-items: center;            /* Centrar todo el contenido verticalmente */
+    width: 30%;
+    height: 50%;                  /* Ajusta la altura según tus necesidades */
+    margin-top: 1%;
+    border-radius: 25px;
+    padding: 0px;                   /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    transition: transform 0.2s;      /* Suaviza la transformación */
+    
+}
+
+.proyectos:hover {
+    transform: scale(1.04); /* Amplía ligeramente al pasar el mouse */
+}
+
+.proyectos__links ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.proyecto-item {
+    position: relative;
+    width: 30%;
+    margin: 1px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px;
+}
+
+.proyecto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #eee;
+    transition: opacity 0.3s ease;
+}
+
+.proyecto-info {
+    padding: 10px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.proyecto-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #FF407D;
+}
+
+.proyecto-fecha {
+    font-size: 14px;
+    color: #333;
+}
+
+.proyecto-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: var(--color-de-link);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+.proyecto-link:hover {
+    background-color: var(--color-de-sublink);
+}
+
+/* ------------------------------ Pie de Pagina---------------------------------------*/
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: var(--color-de-footer); /* Color de fondo del pie de página */
+    padding: 20px;                           /* Espaciado del pie de página */
+    color: #ffffff;            /* Color del texto */
+    text-align: center;                       /* Centrar texto */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  /* Usar fuente Montserrat */
+    font-size: 13px;                       /* Tamaño de fuente */
+    font-weight: 400;                        /* Grosor de fuente */
+    margin-top: 5%;
+}
+
+.footernombre {
+    font-family: var(--fuente-Sweet-Someday);
+    font-size: 19px;
+}
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+}

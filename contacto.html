@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente del Proyecto Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Acardona | Desarrolladora web front-end</title>
+</head>
+
+<body>
+
+    <!-- Menú -->
+    <header class="cabecera">
+        <a href="index.html" class="logo">
+            <div class="text__box">
+                <h1>Acardona</h1>
+            </div>
+        </a>
+        
+        <nav class="navegacion">
+            <ul class="navegacion__lista">
+                <li class="navegacion__elemento"><a href="sobremi.html">Sobre mí</a></li>
+                <li class="navegacion__elemento"><a href="proyectos.html">Proyectos</a></li>
+                <li class="navegacion__elemento"><a href="formacion.html">Formación</a></li>
+                <li class="navegacion__elemento"><a href="contacto.html">Contacto</a></li>
+                <!--<li class="navegacion__elemento"><a href="#habilidades">Habilidades</a></li>-->
+                <!--<li class="navegacion__elemento"><a href="#aficiones">Aficiones</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="presentacion">
+        <div class="presentacion__contenedor">
+            <h1 class="presentacion__titulo">Ponte en contacto conmigo directamente 
+                <br>
+                por redes sociales o Email.</h1>
+
+            <div class="contenedor__img">
+                <img class="avatar" src="img/MedioC_Acuarela.png" alt="Andrea Medio Cuerpo">
+            </div>
+
+            <ul class="redes">
+                <li class="redes__img"><a href="https://github.com/Anndre-a" target="_blank">Github <img src="assets/arrow.png" alt="Flecha"></a></li>
+                <li class="redes__img"><a href="https://www.linkedin.com/in/andrea-cardona-rond%C3%B3n-3215402b2/?trk=opento_sprofile_topcard" target="_blank">Linkedin <img src="assets/arrow.png" alt="Flecha"></a></li>
+            </ul> 
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <h2 class="contacto__titulo">Contactame</h2>
+        <form class="contacto__formulario">
+            <div class="contacto__grupo">
+                <div class="contacto__campo-wrapper">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" class="contacto__campo" type="text" placeholder="">
+                </div>
+                <div class="contacto__campo-wrapper">
+                    <label for="email">Email</label>
+                    <input id="email" class="contacto__campo" type="email" placeholder="">
+                </div>
+            </div>
+            <div class="contacto__campo-wrapper contacto__mensaje">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" class="contacto__campo contacto__campo--textarea"></textarea>
+            </div>
+            <button class="contacto__boton" type="submit">Enviar</button>
+        </form>
+    </section>
+    
+
+    <footer class="footer">
+        <p>© 2024<b> Portafolio</b>  | Todos los derechos reservados.
+        <br>Desarrollado por <b class="footernombre">Acardona</b>.</p>
+    </footer>
+    
+</body>
+</html>

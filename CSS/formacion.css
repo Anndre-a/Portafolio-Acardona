@@ -1,0 +1,199 @@
+@font-face {  
+    font-family: 'Sweet-Someday';  
+    src: url(/fonts/Sweet\ Someday.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+@font-face {  
+    font-family: 'Dogname';  
+    src: url(/fonts/Dogname.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+@font-face {  
+    font-family: 'Lemon';  
+    src: url(/fonts/Save\ Lemon.ttf) format('truetype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+
+:root {
+    --fuente-Sweet-Someday: 'Sweet-Someday', sans-serif;
+    --fuente-Dogname: 'Dogname', sans-serif;
+    --fuente-Lemon: 'Lemon', sans-serif;
+    
+    --fondo: #ffffff;
+    --color-logo: #FF407D;
+    --color-nav: #333;
+
+    --color-de-presentación: #ff90bc;
+    --color-de-footer: #FF90BC;
+}
+
+
+body {
+    background-color: var(--fondo);
+    box-sizing: border-box;
+    line-height: 1.6;
+    margin: 0;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-logo);
+    font-family: var(--fuente-Sweet-Someday);
+    font-size: 25px;
+    margin-top: -2%;
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;    
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.navegacion__lista {
+display: flex;
+flex-direction: row;
+}
+
+.navegacion__elemento a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 16px;                        /* Tamaño de la fuente de los enlaces */
+    font-weight: 700;                         /* Grosor de la fuente de los enlaces */
+    color: var(--color-nav);            /* Color del texto del enlace utilizando la variable definida */
+    text-decoration: none;                    /* Eliminar subrayado del texto del enlace */
+    margin-right: 40px;  
+}
+
+.presentacion {
+    align-items: center;            /* Centrar todo el contenido verticalmente */
+    width: 90%;
+    height: 457px;                  /* Ajusta la altura según tus necesidades */
+    border-radius: 25px;
+    background-color: var(--color-de-presentación);
+    color: #1c191a;                 /* Color del texto */
+    padding: 0px;                   /* Espaciado interno */
+    margin-left: 5%;               /* Separo el lado izquierdo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    transition: transform 0.2s;      /* Suaviza la transformación */
+    
+    position: relative;             /* Necesario para aplicar z-index */
+    z-index: 1000;                  /* Asegura que esté delante de los demás contenidos */
+}
+
+
+.presentacion:hover{
+    transform: scale(1.04); /* Amplía el círculo al pasar el mouse */
+}
+
+.presentacion__contenedor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.presentacion__titulo{
+    margin-top: 100px;
+    margin-right: 10%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos sigan una dirección */
+    align-items: flex-end; /* Alinea los hijos al lado derecho */
+    justify-content: center;
+    height: 250px;
+    font-family: var(--fuente-Lemon);
+    font-size: 30px;
+}
+
+
+.contenedor__img {
+    width: 568px;
+}
+
+.avatar {
+    width: 100%;
+    float: left;
+    margin-top: -72.1%;
+    background-attachment: fixed;
+}
+
+.formacion__links ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    justify-items: center;
+}
+
+.formacion-item {
+    position: relative;
+    width: 25%;
+    margin: 14px;
+    background-color: var(--fondo);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 5%;
+}
+
+.formacion-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.formacion-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #eee;
+    transition: opacity 0.3s ease;
+}
+
+.formacion-info {
+    padding: 16px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+}
+
+.formacion-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.formacion-fecha {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer {
+    background-color: var(--color-de-footer); /* Color de fondo del pie de página */
+    padding: 20px;                           /* Espaciado del pie de página */
+    color: #ffffff;            /* Color del texto */
+    text-align: center;                       /* Centrar texto */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   /* Usar fuente Montserrat */
+    font-size: 13px;                       /* Tamaño de fuente */
+    font-weight: 400; 
+    margin-top: 5%;                       /* Grosor de fuente */
+}
+
+.footernombre {
+    font-family: var(--fuente-Sweet-Someday);
+    font-size: 19px;
+}
